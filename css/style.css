@@ -1,49 +1,174 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
-a{
-    text-decoration: none;
-    color: #F5F5F5;
-
-}
-
-body{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
 .container-navbar{
-    background-color: #410074;
+    width: 100%;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    box-shadow: 0 5px 15px 0 #0000002d;
+    position: fixed;
+    background: rgba(65, 0, 116, 0.65);
+    box-shadow: 5px 5px 20px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    z-index: 999;
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 .navbar-logo{
     width: 50px;
+    height: 50px;
+    margin: 10px 20px;
 }
 
 .navbar-logo img{
     max-width: 100%;
     height: auto;
     border-radius: 5px;
+    box-shadow: 0 5px 15px 0 #0000002d;
 }
 
 .navbar-link{
     display: flex;
     align-items: center;
+    margin: 10px 20px;
 }
 
 .navbar-link a{
     margin: 0px 10px;
     transition-duration: 0.5s;
-    font-stretch: 20%;
+    border: 1px solid #cc89ff67;
+    border-radius: 5px;
+    padding: 5px 15px;
+    box-shadow: 0 5px 15px 0 #0000002d;
+    color: #f5f5f5aa;
 }
 
 .navbar-link a:hover{
-    padding: 10px 20px;
+    padding: 10px 25px;
     background-color: #9000ff6c;
     border-radius: 5px;
     transition-duration: 0.5s;
+    color: #F5F5F5;
+}
+
+.home-background{
+    background-image: url("../assets/background_home.jpg.webp");
+    background-size: cover;
+    height: 580px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.home-box-titulo{
+    width: 80%;
+    height: auto;
+    margin: 10px;
+    border-radius: 15px;
+    border: 0.5px solid #cc89ff67;
+    background: rgba(65, 0, 116, 0.65);
+    box-shadow: 5px 5px 20px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F5F5F5;
+}
+
+.home-box-titulo label{
+    font-size: min(50px, 6vw);
+    font-family: 'Chakra Petch', sans-serif;
+    text-align: center;
+    margin: 100px 20px;
+}
+
+.home-rodape{
+    display: flex;
+    justify-content: center;
+}
+
+.home-rodape-desc{
+    margin: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background: linear-gradient(95deg, #410074 10.2%, rgba(108, 0, 158, 0.80) 50.39%, #002652 89.75%);
+    font-family: 'Oswald', sans-serif;
+    box-shadow: 5px 5px 20px 1px inset rgba(0, 0, 0, 0.25);*/
+    text-align: center;
+    color: #410074;
+}
+
+.home-rodape-desc label{
+    margin: 50px;
+    font-size: max(20px, 2vw);
+}
+
+.container-guias-montagem{
+    margin: 50px 0px;
+}
+
+.cabecalho-guias-montagem{
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.linha-vertical{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    margin-left: 40px;
+    background: linear-gradient(270deg, #CB89FF 0%, #410074 50%);
+}
+
+.titulo-guias-montagem{
+    color: #410074;
+    font-family: 'Chakra Petch', sans-serif;
+    margin: 0px 55px;
+    font-size: max(25px, 3vw);
+}
+
+.cabecalho-guias-montagem p{
+    color: #171717;
+    margin: 15px 55px 0px 55px;
+    font-size: max(20px, 2vw); /* Padrão para descrições */
+}
+
+.container-card{
+    height: 593px;
+    background-image: url("../assets/wallpaper-cards.svg");
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #410074;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8em;
+    z-index: 998;
+}
+
+footer i{
+    padding: 4px 7px;
+    background-color: #F5F5F5;
+    color: #410074;
+    border-radius: 5px;
+}
+
+footer div{
+    margin-left: 10px;
 }

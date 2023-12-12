@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&family=Oswald:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #F5F5F5;
+
+}
+
+body{
+    font-family: 'Oswald', sans-serif;
+    color: #F5F5F5;
+    background-color: #F5F5F5;
+}
