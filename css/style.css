@@ -3,13 +3,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 5px 15px 0 #0000002d;
     position: fixed;
     background: rgba(65, 0, 116, 0.65);
     box-shadow: 5px 5px 20px 1px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(5px);
     z-index: 999;
     font-family: 'Chakra Petch', sans-serif;
+    font-size: max(16px, 1vw);
 }
 
 .navbar-logo{
@@ -91,9 +91,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /*background: linear-gradient(95deg, #410074 10.2%, rgba(108, 0, 158, 0.80) 50.39%, #002652 89.75%);
-    font-family: 'Oswald', sans-serif;
-    box-shadow: 5px 5px 20px 1px inset rgba(0, 0, 0, 0.25);*/
     text-align: center;
     color: #410074;
 }
@@ -130,41 +127,105 @@
 .cabecalho-guias-montagem p{
     color: #171717;
     margin: 15px 55px 0px 55px;
-    font-size: max(20px, 2vw); /* Padrão para descrições */
 }
 
-.container-card{
+.container-tutorial{
     background-image: url("../assets/wallpaper-cards.svg");
     background-size: cover;
     background-repeat: no-repeat;
     padding: 20px;
 }
 
+.container-tutorial p{
+    margin-left: 20px;
+}
+
+.container-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
 .card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+
+}
+
+.card-superior{
     width: 250px;
     height: 200px;
-    background: rgb(65,0,116);
     background: linear-gradient(180deg, rgba(65,0,116,0.8992319915254238) 0%, rgba(144, 0, 255, 0.576) 58%, rgba(185, 69, 252, 0.449) 100%);    
-    box-shadow: 5px 5px 20px 1px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(10px);
+    box-shadow: 5px 5px 20px 1px rgba(0, 0, 0, 0.146);
     border: 0.5px solid #cc89ff3c;
-    margin: 10px;
+    border-radius: 5px 5px 0px 0px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-superior label{
+    margin-bottom: 10px;
+}
+
+.card-superior i{
+    position: absolute;
+    padding: 30px;
+    font-size: 50px;
+    border-radius: 50%;
+    background: #b945fc;
+    box-shadow: inset 20px -20px 40px #410074,
+            inset -20px 20px 40px #CB89FF;
 }
 
 .container-card button{
     width: 250px;
-    padding: 15px 5px;
-    margin: 5px 10px 10px 10px;
     background: #b945fc65;
+    box-shadow: 5px 5px 20px 1px rgba(0, 0, 0, 0.146);
     backdrop-filter: blur(10px);
-    font-family: 'Chakra Petch', sans-serif;
-    font-size: max(16px, 1vw);
     outline: none;
-    border-radius: 0px 0px 10px 10px;
-    border: none;
+    border-radius: 0px 0px 5px 5px;
     color: #F5F5F5;
     border: 0.5px solid #cc89ff3c;
+    font-size: max(16px, 1vw);
+    font-family: 'Chakra Petch', sans-serif;
+    box-shadow: 5px 5px 20px 1px rgba(0, 0, 0, 0.25);
+    padding: 15px 5px;
+    margin-top: 10px;
 }
+
+.card-video{
+    width: 300px;
+    height: 150px;
+}
+
+.card-video iframe{
+    border-radius: 10px;
+    border: 1px solid #cc89ff2e;
+    background: #410074;
+    box-shadow: 5px 5px 20px 1px rgba(0, 0, 0, 0.25);
+}
+
+.card label{
+    width: 260px;
+    padding: 15px 5px;
+    border-radius: 10px;
+    border: 1px solid #cc89ff3a;
+    background: #410074;
+    text-align: center;
+    font-size: max(16px, 1vw);
+    font-family: 'Chakra Petch', sans-serif;
+    box-shadow: 5px 5px 20px 1px rgba(0, 0, 0, 0.25);
+    padding: 15px 20px;
+    margin-top: 10px;
+}
+
+
 
 
 
@@ -185,7 +246,7 @@ footer{
     align-items: center;
     background-color: #410074;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 0.8em;
+    font-size: 0.4em;
     z-index: 998;
 }
 

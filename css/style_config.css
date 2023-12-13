@@ -15,4 +15,5 @@ body{
     font-family: 'Oswald', sans-serif;
     color: #F5F5F5;
     background-color: #F5F5F5;
+    font-size: max(20px, 2vw); /* Padrão para descrições */
 }
