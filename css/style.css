@@ -137,6 +137,17 @@
     height: 593px;
     background-image: url("../assets/wallpaper-cards.svg");
     background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card{
+    width: 250px;
+    height: 200px;
+    position: relative;
+    background: linear-gradient(180deg, rgba(66, 0, 116, 0.299) 0%, rgba(144, 0, 255, 0.291) 100%);
+    box-shadow: 5px 5px 20px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);    
+    overflow: hidden;
 }
 
 
