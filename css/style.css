@@ -134,20 +134,36 @@
 }
 
 .container-card{
-    height: 593px;
     background-image: url("../assets/wallpaper-cards.svg");
     background-size: cover;
     background-repeat: no-repeat;
+    padding: 20px;
 }
 
 .card{
     width: 250px;
     height: 200px;
-    position: relative;
-    background: linear-gradient(180deg, rgba(66, 0, 116, 0.299) 0%, rgba(144, 0, 255, 0.291) 100%);
+    background: rgb(65,0,116);
+    background: linear-gradient(180deg, rgba(65,0,116,0.8992319915254238) 0%, rgba(144, 0, 255, 0.576) 58%, rgba(185, 69, 252, 0.449) 100%);    
     box-shadow: 5px 5px 20px 1px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(10px);    
-    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 0.5px solid #cc89ff3c;
+    margin: 10px;
+}
+
+.container-card button{
+    width: 250px;
+    padding: 15px 5px;
+    margin: 5px 10px 10px 10px;
+    background: #b945fc65;
+    backdrop-filter: blur(10px);
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: max(16px, 1vw);
+    outline: none;
+    border-radius: 0px 0px 10px 10px;
+    border: none;
+    color: #F5F5F5;
+    border: 0.5px solid #cc89ff3c;
 }
 
 
