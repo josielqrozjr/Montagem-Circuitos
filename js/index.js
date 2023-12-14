@@ -15,6 +15,7 @@ window.onload = async function() {
         let conteudo = `
             <div class="card">
                 <div class="card-superior">
+                    <div class="filter-glass"></div>
                     <i class="fa-brands fa-google-drive"></i>
                 </div>
                 <button>${docsPdf[i].titulo_rel}</button>

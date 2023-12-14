@@ -101,12 +101,12 @@
 }
 
 .container-guias-montagem{
-    margin: 50px 0px;
+    margin: 100px 0px;
 }
 
 .cabecalho-guias-montagem{
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 .linha-vertical{
@@ -133,7 +133,7 @@
     background-image: url("../assets/wallpaper-cards.svg");
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 20px;
+    padding: 30px 20px;
 }
 
 .container-tutorial p{
@@ -159,8 +159,8 @@
 .card-superior{
     width: 250px;
     height: 200px;
-    background: linear-gradient(180deg, rgba(65,0,116,0.8992319915254238) 0%, rgba(144, 0, 255, 0.576) 58%, rgba(185, 69, 252, 0.449) 100%);    
-    backdrop-filter: blur(10px);
+    background-image: url("../assets/capa-card-superior.png");
+    background-size: contain;
     box-shadow: 5px 5px 20px 1px rgba(0, 0, 0, 0.146);
     border: 0.5px solid #cc89ff3c;
     border-radius: 5px 5px 0px 0px;
@@ -170,14 +170,22 @@
     align-items: center;
 }
 
+.filter-glass{
+    width: 100%;
+    height: 100%;
+    background: #f5f5f55a;
+    backdrop-filter: blur(2px);
+    border-radius: 5px 5px 0px 0px;
+}
+
 .card-superior label{
     margin-bottom: 10px;
 }
 
 .card-superior i{
     position: absolute;
-    padding: 30px;
-    font-size: 50px;
+    padding: 20px;
+    font-size: max(40px, 2vw);
     border-radius: 50%;
     background: #b945fc;
     box-shadow: inset 20px -20px 40px #410074,
@@ -198,7 +206,29 @@
     box-shadow: 5px 5px 20px 1px rgba(0, 0, 0, 0.25);
     padding: 15px 5px;
     margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
+   
+.container-card button::before {
+    content: '';
+    width: 0;
+    height: 55px;
+    border-radius: 0px 0px 5px 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #410074;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+    color: #CB89FF;
+   }
+   
+   button:hover::before {
+    width: 250px;
+   }
 
 .card-video{
     width: 300px;
@@ -225,20 +255,6 @@
     padding: 15px 20px;
     margin-top: 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 footer{
     height: 50px;

@@ -8,12 +8,12 @@ $docs_pdf = [
     ],
     [
         "id" => 2,
-        "titulo_rel" => 'Sistema alimentador de peças',
+        "titulo_rel" => 'Alimentador de peças',
         "link" => 'https://drive.google.com/file/d/1uDKVqP8IwPAQbtbSGTwB7DeB-7yuJNZb/view'
     ],    
     [
         "id" => 3,
-        "titulo_rel" => 'Sistema de abertura da porta de ônibus',
+        "titulo_rel" => 'Abertura da porta de ônibus',
         "link" => 'https://drive.google.com/file/d/1NqkqN6GMKE8PBZDw_QM4KFJe0YAX-f6V/view'
     ],   
     [
