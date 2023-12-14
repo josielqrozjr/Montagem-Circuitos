@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 a{
     text-decoration: none;
     color: #F5F5F5;
@@ -16,4 +20,9 @@ body{
     color: #F5F5F5;
     background-color: #F5F5F5;
     font-size: max(20px, 2vw); /* Padrão para descrições */
+}
+
+section{
+    min-height: 100vh;
+    padding-top: 8rem;
 }

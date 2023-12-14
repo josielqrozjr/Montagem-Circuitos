@@ -6,11 +6,11 @@
     position: fixed;
     background: rgba(65, 0, 116, 0.65);
     box-shadow: 5px 5px 20px 1px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     z-index: 999;
     font-family: 'Chakra Petch', sans-serif;
     font-size: max(16px, 1vw);
-    padding: 10px;
+    padding: 5px;
 }
 
 .navbar-logo{
@@ -40,22 +40,20 @@
     transition-duration: 0.5s;
     border: 1px solid #cc89ff67;
     border-radius: 5px;
-    padding: 5px 15px;
+    padding: 10px 15px;
     box-shadow: 0 5px 15px 0 #0000002d;
     color: #f5f5f5aa;
+    transition: 0.3s ease-in-out;
 }
 
 .navbar-link a:hover{
-    padding: 10px 25px;
+    scale: 1.1;
     background-color: #9000ff6c;
-    border-radius: 5px;
-    transition-duration: 0.5s;
     color: #F5F5F5;
 }
 
 .home-background{
-    background-image: url("../assets/background_home.jpg.webp");
-    background-size: cover;
+    background: center / cover no-repeat url("../assets/background_home.jpg.webp");
     height: 580px;
     display: flex;
     align-items: center;
@@ -96,16 +94,13 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    background-color: #F5F5F5;
     color: #410074;
 }
 
 .home-rodape-desc label{
     margin: 50px;
     font-size: max(20px, 2vw);
-}
-
-.container-guias-montagem{
-    margin: 100px 0px;
 }
 
 .cabecalho-guias-montagem{
@@ -130,7 +125,7 @@
 
 .cabecalho-guias-montagem p{
     color: #171717;
-    margin: 15px 55px 0px 55px;
+    margin: 0px 55px;
 }
 
 .container-tutorial{
