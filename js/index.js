@@ -18,7 +18,9 @@ window.onload = async function() {
                     <div class="filter-glass"></div>
                     <i class="fa-brands fa-google-drive"></i>
                 </div>
-                <button>${docsPdf[i].titulo_rel}</button>
+                <a href="${docsPdf[i].link}" target="_blank">
+                    <button>${docsPdf[i].titulo_rel}</button>
+                </a>
             </div>
         `;
 

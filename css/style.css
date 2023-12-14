@@ -10,12 +10,16 @@
     z-index: 999;
     font-family: 'Chakra Petch', sans-serif;
     font-size: max(16px, 1vw);
+    padding: 10px;
 }
 
 .navbar-logo{
-    width: 50px;
-    height: 50px;
-    margin: 10px 20px;
+    width: 55px;
+    min-width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
 }
 
 .navbar-logo img{
@@ -190,6 +194,11 @@
     background: #b945fc;
     box-shadow: inset 20px -20px 40px #410074,
             inset -20px 20px 40px #CB89FF;
+    transition: 0.5s ease-in-out;
+}
+
+.card-superior i:hover{
+    scale: 1.2;
 }
 
 .container-card button{
@@ -209,6 +218,7 @@
     position: relative;
     overflow: hidden;
     z-index: 1;
+    cursor: pointer;
 }
    
 .container-card button::before {
@@ -224,10 +234,12 @@
     display: block;
     z-index: -1;
     color: #CB89FF;
+    cursor: pointer;
    }
    
    button:hover::before {
     width: 250px;
+    cursor: pointer;
    }
 
 .card-video{
