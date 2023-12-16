@@ -1,7 +1,7 @@
 // Carregar os cards com a informações do servidor
 window.onload = async function() {
     try {
-        const response = await fetch("https://seu-servidor.com/php/database.php", {
+        const response = await fetch("https://circuitoseletropneumaticosifpa.netlify.app/php/database.php", {
             method: "GET",
             mode: "cors",  // Lidar com CORS
         });
