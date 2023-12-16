@@ -1,7 +1,7 @@
 // Carregar os cards com a informações do servidor
 window.onload = async function() {
     try {
-        const response = await fetch("http://localhost:8888/Montagem-Circuitos/php/database.php", {
+        const response = await fetch("api/database.php", {
             method: "GET",
             mode: "cors",  // Lidar com CORS
         });
