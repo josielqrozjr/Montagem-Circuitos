@@ -1,44 +1,54 @@
 // Carregar os cards com a informações do servidor
 window.onload = async function() {
-    const card = await fetch("php/database.php", {
-        method: "GET"
-    });
+    try {
+        const response = await fetch("https://seu-servidor.com/php/database.php", {
+            method: "GET",
+            mode: "cors",  // Lidar com CORS
+        });
 
-    const dados = await card.json();
+        if (!response.ok) {
+            throw new Error(`Erro na solicitação: ${response.status} ${response.statusText}`);
+        }
 
-    // Acessar os dados
-    const docsPdf = dados.docs_pdf;
-    const videoAulas = dados.video_aulas;
+        const jsonData = await response.json();
 
-    for (let i = 0; i < docsPdf.length; i++) {
-        let conteudo = `
-            <div class="card">
-                <div class="card-superior">
-                    <div class="filter-glass"></div>
-                    <i class="fa-brands fa-google-drive"></i>
+        // Acesse os dados
+        const docsPdf = jsonData.docs_pdf;
+        const videoAulas = jsonData.video_aulas;
+
+        for (let i = 0; i < docsPdf.length; i++) {
+            let conteudo = `
+                <div class="card">
+                    <div class="card-superior">
+                        <div class="filter-glass"></div>
+                        <i class="fa-brands fa-google-drive"></i>
+                    </div>
+                    <a href="${docsPdf[i].link}" target="_blank">
+                        <button>${docsPdf[i].titulo_rel}</button>
+                    </a>
                 </div>
-                <a href="${docsPdf[i].link}" target="_blank">
-                    <button>${docsPdf[i].titulo_rel}</button>
-                </a>
-            </div>
-        `;
+            `;
 
-        document.getElementById('cards').innerHTML += conteudo;
-    }
+            document.getElementById('cards').innerHTML += conteudo;
+        }
 
-    for (let i = 0; i < videoAulas.length; i++) {
-        let videos = `
-            <div class="card">
-                <div class="card-video">
-                    <iframe width="300" height="150" src="${videoAulas[i].link_video}" title="${videoAulas[i].titulo_video}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        for (let i = 0; i < videoAulas.length; i++) {
+            let videos = `
+                <div class="card">
+                    <div class="card-video">
+                        <iframe width="300" height="150" src="${videoAulas[i].link_video}" title="${videoAulas[i].titulo_video}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <label>${videoAulas[i].titulo_video}</label>
                 </div>
-                <label>${videoAulas[i].titulo_video}</label>
-            </div>
-        `;
+            `;
 
-        document.getElementById('cards_videos').innerHTML += videos;
+            document.getElementById('cards_videos').innerHTML += videos;
+        }
+    } catch (error) {
+        console.error('Erro ao obter e processar os dados:', error);
     }
-}
+};
+
 
 // SCROLL SUAVIZADO
 const menuItens = document.querySelectorAll('.navbar-link a[href^="#"]'); // Selecionar apenas os links internos, ou seja, que começam com '#'

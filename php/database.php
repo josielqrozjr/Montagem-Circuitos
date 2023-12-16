@@ -1,5 +1,23 @@
 <?php 
 
+// Permitir solicitações de qualquer origem
+header("Access-Control-Allow-Origin: *");
+
+// Permitir solicitações com os métodos GET, POST, PUT, DELETE, OPTIONS
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+
+// Permitir cabeçalhos Content-Type necessários para solicitações com corpo (como POST)
+header("Access-Control-Allow-Headers: Content-Type");
+
+// Configurar o tipo de conteúdo para JSON
+header("Content-Type: application/json");
+
+// Se a solicitação for OPTIONS, encerrar a execução aqui (resposta CORS pré-voo)
+if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+    http_response_code(200);
+    exit();
+}
+
 $docs_pdf = [
     [
         "id" => 1,
