@@ -6,21 +6,25 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style_config.css">
     <link rel="stylesheet" href="css/fontawesome-free-web/css/all.css">
-    <script src="js/index.js"></script>
+    <script defer src="js/index.js"></script>
     <title>Montagem de Circuitos Eletropneumáticos</title>
 </head>
 <body>
-
     <header class="container-navbar">
         <div class="navbar-logo">
             <a href="index.html">
                 <img src="assets/logo_ifpa.jpg" alt="Logo IFPA">
             </a>
         </div>
-        <nav class="navbar-link">
-            <a href="#home">Página Inicial</a>
-            <a href="#section-guias">Guias de montagem</a>
-            <a href="#section-videos">Vídeo aulas</a>
+        <nav class="navbar-link" id="nav">
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
+                <span id="hamburger"></span>
+            </button>
+            <ul id="menu" role="menu">
+                <li><a href="#home">Página Inicial</a></li>
+                <li><a href="#section-guias">Guias de montagem</a></li>
+                <li><a href="#section-videos">Vídeo aulas</a></li>
+            </ul>
         </nav>
     </header>
 
