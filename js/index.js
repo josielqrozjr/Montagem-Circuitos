@@ -1,23 +1,5 @@
 // Carregar os cards com a informações do servidor
-window.onload = async function() {
-```
-    const baseUrl = "https://montagem-circuitos-api-jd9a.vercel.app"
-    try {
-        const response = await fetch(baseUrl, {
-            method: "GET",
-            mode: "cors",  // Lidar com CORS
-        });
-
-        if (!response.ok) {
-            throw new Error('Erro na solicitação: ${response.status} ${response.statusText}');
-        }
-
-        const jsonData = await response.json();
-
-        // Acesse os dados recebidos do json
-        const docsPdf = jsonData.docs_pdf;
-        const videoAulas = jsonData.video_aulas;
-```
+window.onload = function() {
 
     const docsPdf = [
         {
@@ -108,9 +90,6 @@ window.onload = async function() {
 
             document.getElementById('cards_videos').innerHTML += videos;
         }
-    ```} catch (error) {
-        console.error('Erro ao obter e processar os dados:', error);
-    }```
 };
 
 
