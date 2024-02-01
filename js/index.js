@@ -5,7 +5,7 @@ window.onload = async function() {
     try {
         const response = await fetch(baseUrl, {
             method: "GET",
-            //mode: "cors",  // Lidar com CORS
+            mode: "cors",  // Lidar com CORS
         });
 
         if (!response.ok) {
