@@ -1,9 +1,11 @@
 // Carregar os cards com a informações do servidor
 window.onload = async function() {
+
+    const baseUrl = "https://montagem-circuitos-api-jd9a.vercel.app"
     try {
-        const response = await fetch("https://circuitos-eletropneumaticos-ifpa.vercel.app/api/database.php", {
+        const response = await fetch(baseUrl, {
             method: "GET",
-            mode: "cors",  // Lidar com CORS
+            //mode: "cors",  // Lidar com CORS
         });
 
         if (!response.ok) {
@@ -12,7 +14,7 @@ window.onload = async function() {
 
         const jsonData = await response.json();
 
-        // Acesse os dados
+        // Acesse os dados recebidos do json
         const docsPdf = jsonData.docs_pdf;
         const videoAulas = jsonData.video_aulas;
 
